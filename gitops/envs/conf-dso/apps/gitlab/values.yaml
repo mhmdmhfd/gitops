@@ -32,8 +32,6 @@ cpn-ansible-job:
 
       '
     create: true
-  global:
-    platform: openshift
   job:
     activeDeadlineSeconds: 1800
     backoffLimit: 60

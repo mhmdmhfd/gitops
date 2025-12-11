@@ -80,8 +80,7 @@ spec:
             syncProfileAttributes:
             - email
         certificates:
-          customCAs:
-          - configMap: openshift-service-ca.crt
+          customCAs: null
           image:
             repository: <path:dso-in-cluster/data/env/conf-dso/apps/global/values#image
               | jsonPath {.repository.gitlab}>/gitlab-org/build/cng/certificates

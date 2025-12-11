@@ -1,4 +1,1 @@
-cpn-ansible-job:
-  global:
-    platform: openshift
 global: {}
