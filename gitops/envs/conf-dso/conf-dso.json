@@ -4,7 +4,7 @@
   "region": "fr-par",
   "namespacePrefix": "dso-",
   "destination": {
-    "clusterName": "sandbox"
+    "clusterName": "in-cluster"
   },
   "targetRevision": "main",
   "apps": [

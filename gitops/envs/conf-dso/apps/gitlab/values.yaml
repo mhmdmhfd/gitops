@@ -1,7 +1,7 @@
 cluster:
   cluster:
     enablePDB: false
-    imageName: <path:dso-sandbox/data/env/conf-dso/apps/global/values#image | jsonPath
+    imageName: <path:dso-in-cluster/data/env/conf-dso/apps/global/values#image | jsonPath
       {.repository.ghcr}>/cloudnative-pg/postgresql:16.2
     initdb:
       database: gitlabhq_production
@@ -51,8 +51,8 @@ cpn-ansible-job:
     - secretRef:
         name: ansible-secret
     image:
-      repository: <path:dso-sandbox/data/env/conf-dso/apps/global/values#image | jsonPath
-        {.repository.ghcr}>/cloud-pi-native/git-ansible
+      repository: <path:dso-in-cluster/data/env/conf-dso/apps/global/values#image
+        | jsonPath {.repository.ghcr}>/cloud-pi-native/git-ansible
       tag: '1'
 gitlab:
   affinity:
@@ -76,18 +76,18 @@ gitlab:
     name: gitlab-operator
     prepend: 'false'
     pullPolicy: IfNotPresent
-    registry: <path:dso-sandbox/data/env/conf-dso/apps/global/values#image | jsonPath
+    registry: <path:dso-in-cluster/data/env/conf-dso/apps/global/values#image | jsonPath
       {.repository.gitlab}>
-    repository: <path:dso-sandbox/data/env/conf-dso/apps/global/values#image | jsonPath
-      {.repository.gitlabOperator}>/cloud-native
+    repository: <path:dso-in-cluster/data/env/conf-dso/apps/global/values#image |
+      jsonPath {.repository.gitlabOperator}>/cloud-native
     tag: 2.4.1
   manager:
     debug:
       enabled: true
     kubeRbacProxy:
       image:
-        registry: <path:dso-sandbox/data/env/conf-dso/apps/global/values#image | jsonPath
-          {.repository.gitlab}>
+        registry: <path:dso-in-cluster/data/env/conf-dso/apps/global/values#image
+          | jsonPath {.repository.gitlab}>
     serviceAccount:
       annotations: {}
       create: true
