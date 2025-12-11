@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: sandbox-dso-install-manager-wave-70
+  name: in-cluster-dso-install-manager-wave-70
   namespace: infra-argocd
   annotations:
     argocd.argoproj.io/sync-wave: "70"
@@ -34,7 +34,7 @@ spec:
                   values: ["70"]
   template:
     metadata:
-      name: "sandbox-{{.namespacePrefix}}{{.app}}"
+      name: "in-cluster-{{.namespacePrefix}}{{.app}}"
       annotations:
         argocd.argoproj.io/compare-options: ServerSideDiff=true
       labels:

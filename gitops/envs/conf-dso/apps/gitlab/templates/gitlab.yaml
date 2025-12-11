@@ -76,7 +76,8 @@ spec:
             blockAutoCreatedUsers: false
             enabled: true
             providers:
-            - secret: openid-connect
+            - key: provider
+              secret: openid-connect
             syncProfileAttributes:
             - email
         certificates:

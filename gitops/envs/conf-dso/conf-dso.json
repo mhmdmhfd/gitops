@@ -50,7 +50,7 @@
     },
     {
       "app": "keycloak",
-      "enabled": false,
+      "enabled": true,
       "clusterName": "",
       "namespace": "keycloak",
       "customNamespacePrefix": "",
