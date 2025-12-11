@@ -1,0 +1,8 @@
+---
+apiVersion: v1
+kind: Secret
+type: Opaque
+metadata:
+  name: avp-plugin-trigger-sandbox
+  annotations:
+    avp.kubernetes.io/remove-missing: "true"
